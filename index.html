@@ -2,11 +2,13 @@
 <html>
 <head>
 	<title>Muhamad Arsyil Adzhim</title>
+	<meta charset="utf-8">
 	<style type="text/css">
 	img{
 	border-radius:50%;
 	border:5px solid #330066;
 	margin-left: 50%;
+	image-orientation: from-image;
 	}
 	table {
 		padding: 15px;
@@ -17,11 +19,17 @@
 		margin-bottom: 15px;
 	}
 
-	.parentheses li:before {
-
-    content: ')';
+	.parentheses {
+  counter-reset: list;
 }
-	}
+.parentheses > li {
+  list-style: none;
+}
+.parentheses > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+}
+
 
 	</style>
 </head>
@@ -64,7 +72,7 @@ border="0px" style="border-color: blue" class="judul">
 		</ul>
 </td>
 	<td>
-		<img src="S.jpg" height="200px">
+		<img src="S.png" height="200px" class="rotate">
 	</td>
 </tr>
 </table>
@@ -382,13 +390,14 @@ Jika dilihat secara garis besar, media media transmisi bisa dibagi ke dalam dua 
 				<br>
 				
 				<ol style="padding-left: 20px">
-			<li>Guided Media atau Wired</li>
+			<li>Guided Media atau Wired
 
-					<p>Guided media, wired atau media yang dituntun merupakan jenis media yang mempunyai bentuk fisik seperti kabel pasangan berpilin atau twisted pair, kabel serat optik atau fiber optic cable dan juga karakteristiknya yang seperti berkecepatan transmisi, efek suara, penampilan fisik dan sinyalnya.
+				<p>Guided media, wired atau media yang dituntun merupakan jenis media yang mempunyai bentuk fisik seperti kabel pasangan berpilin atau twisted pair, kabel serat optik atau fiber optic cable dan juga karakteristiknya yang seperti berkecepatan transmisi, efek suara, penampilan fisik dan sinyalnya.
 						<br>
 					Ini dikatakan sebagai guided media sebab sinyal listrik atau gelombang dituntun transmisinya melewati media fisik. Selain itu, ada juga yang menyebut guided media dengan wired atau bound transmission media.
 						<br>
-						<ol class="parentheses" style="list-style: lower-alpha;">
+
+				<ol class="parentheses" style="list-style: lower-alpha;">
 							<li>
 		Kabel Pasangan Berpilin
 							</li>
@@ -408,6 +417,11 @@ Jika dilihat secara garis besar, media media transmisi bisa dibagi ke dalam dua 
 		<p>
 		Fiber optic cable atau kabel serat optik merupakan saluran transmisi atau sejenis kabel dari serat kaca atau plastik halus bisa mentransmisikan sinyal cahaya dari satu tempat ke tempat lainnya. Untuk sumber cahaya bisa berasal dari sinar laser atau sinar LED dan diameter kabel serat optik adalah sekitar 120 mikrometer.</p>
 						</ol>
+
+			</li>
+
+					
+						
 						
 		
 		
@@ -432,7 +446,7 @@ LATIHAN SOAL !
 				<br>
 				<ol style="padding-left: 20px">
 <li>Sebutkan kategorisasi media transmisi kabel</li>
-	<p>				
+					
 	i)	Kabel pasangan berpilin (Twisted pair cable)
 				<br>
 	ii)	Kabel Koaksial (Coaxial Cable)
@@ -440,11 +454,10 @@ LATIHAN SOAL !
 	iii)Kabel Serat Optik (Fiber Optic Cable)
 				<br>
 	
-	</p>
 <li>
-Sebutkan jenis orbital dalam sistem satelit dan jelaskan 			kelebihan dan kekurangannya	
+Sebutkan jenis orbital dalam sistem satelit dan jelaskan kelebihan dan kekurangannya	
 </li>
-	<p>
+	
 	•	Jenis orbital dalam sistem satelit :
 				<br>
 		Low Earth Orbit (LEO) Satelit dengan orbit terendah dengan ketinggian 500-2000 km diatas permukaan bumi. Waktu yang digunakan untuk  mengelilingi bumi adalah 30 menit sampai 1 jam. Contoh dari satelit LEO ini adalah Iridium Satelit.
@@ -473,12 +486,10 @@ Sebutkan jenis orbital dalam sistem satelit dan jelaskan 			kelebihan dan kekura
 				<br>
 		Internet dapat mengakses hal hal negatif dan bisa memalsukan profil orang.
 				<br>
-				<br>
-<li>Menurut pendapat anda apa media trasmisi yang cocok digunakan 		untuk Kawasan kepulauan seperti negara indonesia</li>
-				<br>
+<li>Menurut pendapat anda apa media trasmisi yang cocok digunakan untuk Kawasan kepulauan seperti negara indonesia</li>
 	Menurut saya, media transmisi yang cocok digunakan untuk Kawasan kepulauan seperti negara Indonesia ialah media wireless karena jika wireless menggunakan wifi yang di setting sebagai ap atau accespoint, sedangkan kabel menggunakan modem ataupun lan card.
 				<br>
-	</p>
+
 				</ol>	
 				<br>
 				<br>
@@ -503,12 +514,11 @@ Beberapa kesimpulan yang bisa saya ambil dalam materi ini ialah :
 Encoding adalah proses memasukkan deretan data untuk diubah ke format 
 khusus agar bisa disimpan atau ditransmisikan dengan tujuan meningkatkan kualitas komunikasi.
 				<br>
-	•	Line coding : teknik yang digunakan untuk mentransmisikan 		sinyal baseband.
-				<br>
-	•	Channel coding teknik yang digunakan untuk meningkatkan 		reliabilitas informasi pada kanal (error correction).
-				<br>
-	•	Source coding : teknik yang digunakan untuk meningkatkan 		efisiensi.informasi (kompresi)
-				<br>
+				<ol style="list-style: disc;">
+					<li>Line coding : teknik yang digunakan untuk mentransmisikan 		sinyal baseband.</li>
+					<li>Channel coding teknik yang digunakan untuk meningkatkan 		reliabilitas informasi pada kanal (error correction).</li>
+					<li>Source coding : teknik yang digunakan untuk meningkatkan 		efisiensi.informasi (kompresi)</li>
+				</ol>
 				<br>
 CHANNEL CODING 
 				<br>
@@ -516,24 +526,23 @@ Channel coding merupakan teknik encoding yang digunakan untuk
 pendeteksian dan pengkoreksian kesalahan dalam transmisi informasi. 
 Channel coding terdiri dari dua jenis yaitu FEC (Forward Error Correction) dan BEC (Backward Error Correction).
 				<br>
-	•	Contoh FEC adalah : 
-				<br>
-		a)	CRC 
-				<br>
-		b)	Convolutional Codes 
-				<br>
-		c)	Interleaving
-				<br> 
-		d)	Turbo Codes 
-				<br>
-	•	Contoh BEC adalah :  
-				<br> 
-		a)	Stop-and-wait ARQ (Automatic Repeat Request) 
-				<br>
-		b)	Go-back-N ARQ
-				<br> 
-		c)	Selective-repeat ARQ
-				<br>
+				<ol style="list-style: disc;">
+					<li>Contoh FEC adalah :
+						<ol class="parentheses">
+							<li>CRC</li>
+							<li>Convolutional Codes</li>
+							<li>Interleaving</li>
+							<li>Turbo Codes</li>
+						</ol>
+					</li>
+					<li>Contoh BEC adalah :
+						<ol class="parentheses">
+							<li>Stop-and-wait ARQ (Automatic Repeat Request)</li>
+							<li>Go-back-N ARQ</li>
+							<li>Selective-repeat ARQ</li>
+						</ol>
+					</li>
+				</ol>
 				<br>
 CONVOLUTION CODE 
 				<br>
@@ -543,49 +552,60 @@ digunakan untuk mengkoreksi kesalahan.
 				<br>
 LATIHAN SOAL !
 				<br>
-	1.	Sebutkan dan jelaskan jenis-jenis line coding
-		Line coding adalah suatu proses konversi data digital menjadi sinyal digital,dengan asumsi bahwa data berisi atau berbentuk fax, angka, gambar,audio, atau video yang disimpan dalam memori komputer sebagai bit squence. Line coding juga merupakan metoda untuk merubah simbol dari sumber ke dalam bentuk lain untuk ditransmisikan dan dapat merubah pesan-pesan digital ke dalam deretan simbol baru yang disebut dengan proses encoding.
-				<br>
-		Jenis-jenisnya ialah :
-				<br> 
-			•	Unipolar : menggunakan level +v, 0
-				<br>
-				Pengkodean saluran jenis unipolar tunggal.
-				<br>
-			•	Polar (antipodal) : menggunakan level +v, -v
-				<br>
-				Pengkodean polar menggunakan 2 (dua) buah level tegangan yaitu –V dan +V (tegangan positif dan negatif) untuk menyatakan data biner dengan nilai 0 dan 1.
-				<br>
-			•	Bipolar (pseudoternary): menggunakan level +v, 0, -v
-				<br>
-			Pengkodean bipolar yaitu pengkodean dengan menggunakan 3 (tiga) buah level tegangan yaitu –V, 0V, dan +V untuk menyatakan data biner.
-				<br>
-				<br>
-	2.	Sebutkan dan jelaskan jenis-jenis channel coding 
-		Channel coding merupakan suatu teknik yang digunakan untuk meningkatkan performansi pada sistem komunikasi dengan cara mendesign ulang pada sinyal dikirimkan dengan pengaruh dari efek gangguan seperti noise, fading, dan jamming.
-				<br>
-		Jenis-jenisnya ialah :
-				<br>
-		•	Block code
-				<br>
-			Di mana U adalah himpunan blok data biner sepanjang k, dan V adalah himpunan blok kode biner sepanjang n, di mana n>k. Masing-masing dari keseluruhan xx blok data (tupel-k) akan dipetakan ke sebuah blok kode (tupel-n) yang unik. Nilai rasio k/n disebut sebagai laju kode.
-				<br>
-		•	Convolutional code
-				<br>
-			Merupakan salah satu jenis kode yang bisa mendeteksi dan mengoreksi error secara otomatis dan memiliki perbedaan mendasar dari block code dimana urutan bit informasi tidak dikelompok-kelompokkan dalam blok-blok yang berbeda sebelum dikodekan.
-				<br>
-				<br>
-	3.	Sebutkan perbedaan FEC dan BEC
-				<br>
-		FEC adalah dimana setiap karakter yang ditransmisikan atau frame berisi informasi tambahan (redundant) sehingga bila penerima tidak hanya dapat mendeteksi dimana error terjadi, tetapi juga menjelaskan dimana aliran bit yang diterima error.
-				<br>
-		BCE adalah dimana setiap karakter atau frame memiliki informasi yang cukup untuk memperoleh penerima mendeteksi bila menemukan kesalahan tetapi tidak lokasinya. Sebuah tranmisi kontro digunakan untuk meminta pengiriman ulang, menyalin informasi yang dikirim.
-				<br>
-		Perbedaannya :
-				<br>
-		•	FEC Yaitu dimana setiap karakter yang ditrasmisikan atau frame berisi informasi tambahan (redundant) sehingga bila penerima tidak hanya dapat mendeteksi dimana error terjadiendeteksi dimana error terjadi, tet, tetapi jugapi juga menjelaskaan dimana aliran bit yang diterima error.
-				<br>
-		•	BEC Yaitu dimana setiap karakter atau frame memiliki informasi yang cukup untuk memperoleh penerima mendeteksi bila menemukan kesalahan tetapi tidak lokasinya. Sebuah transmisi kontro digunakan untuk meminta pengiriman ulang, menyalin informasi yang dikirimkan.
+				<ol>
+					<li>Sebutkan dan jelaskan jenis-jenis line coding
+						<br>
+						Line coding adalah suatu proses konversi data digital menjadi sinyal digital,dengan asumsi bahwa data berisi atau berbentuk fax, angka, gambar,audio, atau video yang disimpan dalam memori komputer sebagai bit squence. Line coding juga merupakan metoda untuk merubah simbol dari sumber ke dalam bentuk lain untuk ditransmisikan dan dapat merubah pesan-pesan digital ke dalam deretan simbol baru yang disebut dengan proses encoding.
+						<br>
+						Jenis-jenisnya ialah :
+						<ol style="list-style: disc;">
+							<li>Unipolar : menggunakan level +v, 0
+								<br>
+								Pengkodean saluran jenis unipolar tunggal.
+							</li>
+							<li>Polar (antipodal) : menggunakan level +v, -v
+								<br>
+								Pengkodean polar menggunakan 2 (dua) buah level tegangan yaitu –V dan +V (tegangan positif dan negatif) untuk menyatakan data biner dengan nilai 0 dan 1.</li>
+							<li>Bipolar (pseudoternary): menggunakan level +v, 0, -v
+								<br>
+								Pengkodean bipolar yaitu pengkodean dengan menggunakan 3 (tiga) buah level tegangan yaitu –V, 0V, dan +V untuk menyatakan data biner.</li>
+						</ol>
+					</li>
+					<li>Sebutkan dan jelaskan jenis-jenis channel coding 
+						<br>
+						Channel coding merupakan suatu teknik yang digunakan untuk meningkatkan performansi pada sistem komunikasi dengan cara mendesign ulang pada sinyal dikirimkan dengan pengaruh dari efek gangguan seperti noise, fading, dan jamming.
+						<br>
+						Jenis-jenisnya ialah :
+						<ol style="list-style: disc;">
+							<li>Block code
+								<br>
+								Di mana U adalah himpunan blok data biner sepanjang k, dan V adalah himpunan blok kode biner sepanjang n, di mana n>k. Masing-masing dari keseluruhan xx blok data (tupel-k) akan dipetakan ke sebuah blok kode (tupel-n) yang unik. Nilai rasio k/n disebut sebagai laju kode.
+							</li>
+							<li>
+								Convolutional code
+								<br>
+								Merupakan salah satu jenis kode yang bisa mendeteksi dan mengoreksi error secara otomatis dan memiliki perbedaan mendasar dari block code dimana urutan bit informasi tidak dikelompok-kelompokkan dalam blok-blok yang berbeda sebelum dikodekan.
+							</li>
+						</ol>
+					</li>
+					<li>
+						Sebutkan perbedaan FEC dan BEC
+						<br>
+						FEC adalah dimana setiap karakter yang ditransmisikan atau frame berisi informasi tambahan (redundant) sehingga bila penerima tidak hanya dapat mendeteksi dimana error terjadi, tetapi juga menjelaskan dimana aliran bit yang diterima error.
+						<br>
+						BCE adalah dimana setiap karakter atau frame memiliki informasi yang cukup untuk memperoleh penerima mendeteksi bila menemukan kesalahan tetapi tidak lokasinya. Sebuah tranmisi kontro digunakan untuk meminta pengiriman ulang, menyalin informasi yang dikirim.
+						<br>
+						Perbedaannya :
+						<ol style="list-style: disc;">
+							<li>
+								FEC Yaitu dimana setiap karakter yang ditrasmisikan atau frame berisi informasi tambahan (redundant) sehingga bila penerima tidak hanya dapat mendeteksi dimana error terjadiendeteksi dimana error terjadi, tet, tetapi jugapi juga menjelaskaan dimana aliran bit yang diterima error.
+							</li>
+							<li>
+								BEC Yaitu dimana setiap karakter atau frame memiliki informasi yang cukup untuk memperoleh penerima mendeteksi bila menemukan kesalahan tetapi tidak lokasinya. Sebuah transmisi kontro digunakan untuk meminta pengiriman ulang, menyalin informasi yang dikirimkan.
+							</li>
+						</ol>
+					</li>
+				</ol>
 </li>
 			</ul>
 		</td>
