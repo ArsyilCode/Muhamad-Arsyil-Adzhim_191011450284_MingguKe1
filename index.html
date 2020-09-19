@@ -761,19 +761,245 @@ dapat ditulis sebagai
   (   ) = 2      ( ) 
   <br>
   Dimana M merupakan jumlah level sinyal diskrit.
-  <br><br>
+  <br>
+  <br>
   LATIHAN SOAL !
   <br>
-  		<ol>
-  			<li>Tentukan kapasitas dan level dari Sebuah kanal dalam rentang 7MHz dan 9MHz memiliki nilai SNR = 21db
+  		<ol style="list-style: disc;">
+  	1. Tentukan kapasitas dan level dari Sebuah kanal dalam rentang 7MHz dan 9MHz memiliki nilai SNR = 21db 
   				<br>
-  				TUGAS NI DEEE
+  				Diketahui :
+  				<ol style="list-style: disc;">
+  				B : 9Mhz – 7 Mhz = 2 Mhz
+  				 <br>
+				SNR = 21 db = 10 log 10 (SNR) = SNR = 125
+				<br> </ol>
+				Ditanyakan : Kapasitas dan level sinyal diskrit  ?
+				<ol style="list-style: disc;">
+					Jawab : <br>
+				Shanon = C =  20^6 x log 2  (1+125)
+				<ol style="list-style: disc;">
+                                = 20^6 x log 2  (126) <br>
+
+                                = 20^6 x 7 = 14 Mbps<br></ol>
+                                
+                Nyquist = C = 2 B log 2 (M) 
+               <ol style="list-style: disc;">
+                                 = 20^6 x 7 = 2 x 20^6 x log 2 (M)<br>
+
+                                 = 3,5 = log 2 (M)<br>
+
+                                 = M = 12,25 <br>
+                                 = 13 jumlah level sinyal diskrit yang di butuhkan. <br><br></ol>
   			
+  
+  2. Jelaskan metode konversi sinyal analog ke digital
+  	<br>
+  	Ada tiga langkah dalam proses konversi :
+  	<ol style="list-style: disc;">
+  		<li>
+  			Pencuplikan (Sampling) : konversi sinyal analog ke dalam sinyal amplitudo kontinu waktu diskrit.
+  		
+  		<li>
+  			Kuantisasi : konversi masing-masing amplitudo kontinu waktu diskrit dari sinyal sample dikuantisasi dalam level 2B , dimana B adalah number bit yang digunakan untuk reprentasi dalam Analog to Digital Conversion (ADC).
+  		</li>
+  		<li>
+  			Pengkodean : Setiap sinyal amplitudo diskrit yang dikuantisasi direprentasikan kedalam suatu barisan bilangan biner dari masing-masing bit.
   		</li>
   	</ol>
+  </li>
+  
+  	<br>
+  	3.	Jelaskan perbedaan dari mekanisme TDM 4, mekanisme FDM 5, mekanisme WDM
+  	<br>
+  	Perbedaannya : 
+  	<ol style="list-style: disc;">
+  		<li>
+  			TDM (Time Division Multiplexing)
+  			<br>
+  			TDM berbagi skala waktu untuk sinyal yang berbeda (TDM menggunakan analog dan digital kedua jenis sinyal).
+  		</li>
+  		<li>
+  			FDM (Frequency Division Multiplexing)
+  			<br>
+  			FDM berbagi skala frekuensi untuk sinyal yang berbeda (FDM menggunakan sinyal analog).
+  		</li>
+  		<li>
+  			WDM (Wavelength Division Multiplexing) 
+  			<br>
+  			Menawarkan kemudahan dalam hal peningkatan kapasitas transmisi dalam suatu sistem komunikasi serat optik, khususnya kabel laut.
+  		</li>
+  	</ol>
+</li>
+				</ol>
+</li>
+			</ul>
+		</td>
+	</tr>
+</table>			
+				
+				
+</td>
+	<td>
 
+</table>
+<table align="right" bgcolor="white" width="90%"
+border="0px" style="border-color: blue" class="judul">
+	<tr>
+		<td align="left">
+			<ul style="text-align: justify">
+			<br>
+Pertemuan 8
+<br>
+Dipertemuan 8 ini kita membahas tentang Switching. Switching sendiri merupakan suatu teknologi yang digunakan untuk menghubungkan (men-switch) aliran informasi atau mengarahkan / memforward paket dari suatu link ke link yang lain.
+<br>
+Adapun fungsi dasar switching adalah sebagai berikut :  
+<ol style="list-style: disc;">
+<li>
+	Penyambungan (interconnection).  </li>
+	<li>
+ 	Pengendalian (control).  </li>
+ 	<li>
+ 	Menerima informasi.  </li>
+ 	<li>
+ 	Mengirim informasi.  </li>	
+Dan terdapat dua jenis model switch yaitu circiut switch dan packet switch.
+</ol>
+</li>
+Lalu ada pula yang namanya :
+<ol style="list-style: disc;">
+		Mekanisme Routing 
+		<br>
+		Banyaknya koneksi akan membutuhkan jalur pada lebih dari satu switch. 
+		Untuk itu dibutuhkan suatu pencarian rute, agar lebih Efisien dan Resilience. Pada 
+		jaringan.
+		<br>
+		Terdapat dua jenis mekanisme routing yaitu :
+		<ol style="list-style: disc;">
+		<li>
+			Statik routing, dimana metoda penentuan jalur yang sama 
+			digunakan untuk setiap waktu. 
+		</li>
+		<li>
+			Dinamik routing, memungkinkan untuk mengubah proses routing 
+			dengan bergantung pada trafik dengan memanfaatkan struktur peer 
+			untuk setiap nodenya.
+		</li>
+	</ol>
+		<br>
+		Datagram  
+		<br>
+		Pada mekanisme datagram setiap paket diperlakukan secara independent. 
+		Packet dapat mengambil setiap rute praktis dan Packet mungkin datang di sisi 
+		penerima dengan urutan yang acak. Packet mungkin juga dapat menghilang, 
+		sehingga tergantung pada penerima untuk mengurutkan paket dan mengembalikan 
+		paket yang hilang tersebut. 
+		<br>
+		<br>
+		Virtual Circuit 
+		<br>
+		Pada mekanisme virtual circuit, perangkat harus membangun perencanaan 
+		rute terlebih dahulu sebelum mengirimkan paket. Node pengingrim dan Node 
+		penerima harus membangun koneksi (handshake) terlebih dahulu. Masing-masing 
+		paket terdiri dari sebuah pengenal virtual circuit identifier termasuk alamat 
+		tujuannya. Tidak ada keputusan routing yang diperlukan untuk setiap paket dalam 
+		sistem ini, dan jalur yang terbentuk bukan sebuah jalur yang bersifat dedicated.
+		<br>
+	</ol>
+	<br>
+Dan adapula Perbandingan Datagram dan Virtual Circuit terlihat dalam beberapa point 
+berikut ini : 
+<ol style="list-style: disc;">
+	<li>
+		Datagram 
+		<br>
+		i)	Tidak membutuhkan fase persiapan ketika terjadi call : 
+		sangat baik jika paketnya sedikit. <br>
+		ii)	Lebih fleksibel : Routing dapat digunakan untuk menghadapi 
+		bagian network yang sibuk atau tidak aktif.
+	<li>
+		Virtual circuit
+		<br>
+		i) Jaringan dapat mengatur urutan dan kontrol kesalahan. <br>
+		ii)	Paket di-forward lebih cepat : tidak membutuhkan pemilihan rute dalam perjalanan. <br>
+		iii) Kurang reliabel : Kehilangan suatu node akan menghilangkan seluruh sirkuit setelah node tersebut.<br>
+ 
+	</li>
+</ol>
+	<br>
+LATIHAN SOAL !
+  <br>
+  <ol style="list-style: disc;">
+  	1. Tentukan kapasitas dan level dari Sebuah kanal dalam rentang 7MHz dan 9MHz memiliki nilai SNR = 21db
+  				<br>
+  			Diketahui :
+  				<ol style="list-style: disc;">
+  				B : 9Mhz – 7 Mhz = 2 Mhz
+  				 <br>
+				SNR = 21 db = 10 log 10 (SNR) = SNR = 125
+				<br> </ol>
+			Ditanyakan : Kapasitas dan level sinyal diskrit  ?
+				<ol style="list-style: disc;">
+					Jawab : <br>
+				Shanon = C =  20^6 x log 2  (1+125)
+				<ol style="list-style: disc;">
+                                = 20^6 x log 2  (126) <br>
+                                = 20^6 x 7 = 14 Mbps<br></ol>
+                                
+                Nyquist = C = 2 B log 2 (M) 
+               <ol style="list-style: disc;">
+                                 = 20^6 x 7 = 2 x 20^6 x log 2 (M)<br>
+                                 = 3,5 = log 2 (M)<br>
+                                 = M = 12,25 <br>
+                                 = 13 jumlah level sinyal diskrit yang di butuhkan. <br><br></ol>
+  
+  2. Jelaskan metode konversi sinyal analog ke digital
+  	<br>
+  	Ada tiga langkah dalam proses konversi :
+  	<ol style="list-style: disc;">
+  		<li>
+  			Pencuplikan (Sampling) : konversi sinyal analog ke dalam sinyal amplitudo kontinu waktu diskrit.
+  		
+  		<li>
+  			Kuantisasi : konversi masing-masing amplitudo kontinu waktu diskrit dari sinyal sample dikuantisasi dalam level 2B , dimana B adalah number bit yang digunakan untuk reprentasi dalam Analog to Digital Conversion (ADC).
+  		</li>
+  		<li>
+  			Pengkodean : Setiap sinyal amplitudo diskrit yang dikuantisasi direprentasikan kedalam suatu barisan bilangan biner dari masing-masing bit.
+  		</li>
+  	</ol>
+  </li>
+  
+  	<br>
+  	3.	Jelaskan perbedaan dari mekanisme TDM 4, mekanisme FDM 5, mekanisme WDM
+  	<br>
+  	Perbedaannya : 
+  	<ol style="list-style: disc;">
+  		<li>
+  			TDM (Time Division Multiplexing)
+  			<br>
+  			TDM berbagi skala waktu untuk sinyal yang berbeda (TDM menggunakan analog dan digital kedua jenis sinyal).
+  		</li>
+  		<li>
+  			FDM (Frequency Division Multiplexing)
+  			<br>
+  			FDM berbagi skala frekuensi untuk sinyal yang berbeda (FDM menggunakan sinyal analog).
+  		</li>
+  		<li>
+  			WDM (Wavelength Division Multiplexing) 
+  			<br>
+  			Menawarkan kemudahan dalam hal peningkatan kapasitas transmisi dalam suatu sistem komunikasi serat optik, khususnya kabel laut.
+  		</li>
+  	</ol>
+</li>
+				</ol>
+</li>
+			</ul>
+		</td>
+	</tr>
+</table>			
+				
+				
+</td>
+	<td>
 
-
-
-
-
+</table>
